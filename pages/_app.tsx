@@ -1,6 +1,16 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import InitialLoad from "@/components/InitialLoad";
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { lazy, Suspense } from "react";
+
+const Layout = lazy(() => import("../components/Layout"));
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Suspense fallback={<InitialLoad />}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </Suspense>
+  );
 }
