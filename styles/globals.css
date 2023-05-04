@@ -54,8 +54,7 @@ body {
   background-size: cover;
 }
 
-form,
-button,
+h1,
 p {
   font-family: var(--font-family);
   letter-spacing: 1px;
