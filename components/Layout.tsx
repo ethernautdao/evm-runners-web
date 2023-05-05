@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { appTitle } from "@/utils/strings";
 import Head from "next/head";
 import useIsMounted from "../hooks/useIsMounted";
+import Footer from "./shared/Footer";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const { mounted } = useIsMounted();
@@ -14,11 +15,14 @@ export default function Layout({ children }: { children: ReactNode }) {
     <>
       <Head>
         <title>{appTitle}</title>
-        <meta name="description" content="Check your wallet approvals" />
+        <meta name="description" content="An EVM-based game" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {children}
+
+      <main>{children}</main>
+
+      <Footer />
     </>
   );
 }
