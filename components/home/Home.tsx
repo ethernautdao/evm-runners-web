@@ -1,7 +1,7 @@
 import styles from "@/styles/Home.module.css";
 import { appTitle, gameDescription } from "@/utils/strings";
 import { NextPage } from "next";
-import Link from "next/link";
+import { Discord, Github } from "react-bootstrap-icons";
 
 const Home: NextPage = () => {
   return (
@@ -9,9 +9,22 @@ const Home: NextPage = () => {
       <h1>{appTitle}</h1>
       <p>Install command placeholder</p>
       <p>{gameDescription}</p>
-      <Link href="/leaderboards">
-        <p>Check the leaderboards!</p>
-      </Link>
+      <div>
+        <a
+          href="https://github.com/ethernautdao/evm-runners-cli"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Github size={32} />
+        </a>
+        <a
+          href="https://discord.com/invite/RQ5WYDxUF3"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Discord size={32} />
+        </a>
+      </div>
     </div>
   );
 };

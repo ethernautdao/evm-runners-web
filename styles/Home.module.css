@@ -21,6 +21,18 @@
   color: var(--description-text-color);
 }
 
+.main div {
+  display: flex;
+  padding: 1rem;
+}
+
+.main svg {
+  cursor: pointer;
+  fill: var(--footer-svg-fill);
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+}
+
 /* MEDIA */
 @media (max-width: 426px) {
   .main {

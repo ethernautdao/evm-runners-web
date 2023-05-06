@@ -1,9 +1,6 @@
 .footer {
   color: #585f69;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+  text-align: center;
   padding: 20px;
   position: fixed;
   bottom: 0;
@@ -14,17 +11,5 @@
   width: unset;
   padding: unset;
   font-size: 1rem;
-  margin-left: 1rem;
-}
-
-.footer div {
-  display: flex;
-  z-index: 1;
-}
-
-.footer svg {
-  cursor: pointer;
-  fill: var(--footer-svg-fill);
-  border-radius: 0.5rem;
   margin-left: 1rem;
 }
