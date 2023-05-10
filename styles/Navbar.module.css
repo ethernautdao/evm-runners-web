@@ -1,0 +1,19 @@
+.nav {
+  text-align: center;
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: 0;
+}
+
+.nav a {
+  color: var(--navigation-text-color);
+  font-family: Effra Bold;
+  margin: 0 1rem;
+}
+
+.active {
+  color: var(--navigation-active-text-color) !important;
+  border-bottom: 2px solid var(--navigation-border-color);
+}

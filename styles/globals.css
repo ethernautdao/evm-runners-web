@@ -22,6 +22,10 @@
   --header-text-color: linear-gradient(90deg, #cdffe6, #8fdeff);
   --description-text-color: #a9bcce;
 
+  --navigation-text-color: #9cabb0;
+  --navigation-active-text-color: #fff;
+  --navigation-border-color: #cdffe6;
+
   --panel-background: linear-gradient(317.38deg, #18191c, #000);
   --panel-border-rgb: rgb(108, 108, 108);
 
