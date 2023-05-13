@@ -1,4 +1,4 @@
-.home {
+.leaderboardLayout {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +8,7 @@
   min-height: 100vh;
 }
 
-.home h1 {
+.leaderboardLayout h1 {
   font-size: 5rem;
   background: var(--header-text-color);
   background-clip: text;
@@ -16,17 +16,17 @@
   -webkit-text-fill-color: transparent;
 }
 
-.home p {
+.leaderboardLayout p {
   font-size: 2.5rem;
   color: var(--description-text-color);
 }
 
-.home div {
+.leaderboardLayout div {
   display: flex;
   padding: 1rem;
 }
 
-.home svg {
+.leaderboardLayout svg {
   cursor: pointer;
   fill: var(--footer-svg-fill);
   border-radius: 0.5rem;
@@ -35,7 +35,7 @@
 
 /* MEDIA */
 @media (max-width: 426px) {
-  .home {
+  .main {
     padding: 3rem 0;
   }
 }

@@ -5,7 +5,7 @@ import { Discord, Github } from "react-bootstrap-icons";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.main}>
+    <div className={styles.home}>
       <h1>{appTitle}</h1>
       <p>Install command placeholder</p>
       <p>{gameDescription}</p>
