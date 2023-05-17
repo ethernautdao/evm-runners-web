@@ -1,13 +1,20 @@
 import styles from "@/styles/Home.module.css";
-import { appTitle, gameDescription } from "@/utils/strings";
+import { copyToClipboard } from "@/utils/shared";
+import { appTitle, gameDescription, installCommand } from "@/utils/strings";
 import { NextPage } from "next";
-import { Discord, Github } from "react-bootstrap-icons";
+import { Clipboard, Discord, Github } from "react-bootstrap-icons";
 
 const Home: NextPage = () => {
   return (
     <div className={styles.home}>
       <h1>{appTitle}</h1>
-      <p>Install command placeholder</p>
+      <span
+        className={styles.installCommand}
+        onClick={() => copyToClipboard(installCommand)}
+      >
+        <code>{installCommand}</code>
+        <Clipboard size={24} />
+      </span>
       <p>{gameDescription}</p>
       <div>
         <a

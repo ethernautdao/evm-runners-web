@@ -33,6 +33,20 @@
   margin-left: 1rem;
 }
 
+.installCommand {
+  padding: 1rem;
+  background: var(--install-command-background);
+  display: inline-block;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.installCommand code,
+.installCommand svg {
+  color: white;
+  vertical-align: middle;
+}
+
 /* MEDIA */
 @media (max-width: 426px) {
   .home {
