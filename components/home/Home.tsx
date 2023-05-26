@@ -7,7 +7,7 @@ import { Clipboard, Discord, Github } from "react-bootstrap-icons";
 const Home: NextPage = () => {
   return (
     <div className={styles.home}>
-      <h1>{appTitle}</h1>
+      <h1 data-cy="home-app-title">{appTitle}</h1>
       <span
         className={styles.installCommand}
         onClick={() => copyToClipboard(installCommand)}

@@ -2,8 +2,8 @@ import { ReactNode } from "react";
 import { appTitle } from "@/utils/strings";
 import Head from "next/head";
 import useIsMounted from "../hooks/useIsMounted";
-import Footer from "./shared/Footer";
-import NavBar from "./shared/NavBar";
+import Footer from "./common/footer/Footer";
+import NavBar from "./common/navbar/NavBar";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const { mounted } = useIsMounted();

@@ -2,12 +2,20 @@ describe("NAVIGATION", () => {
   it("should navigate correctly", () => {
     cy.visit("/");
 
-    cy.get('[href="/leaderboards"]').should("be.visible").click();
-    cy.url().should("include", "/leaderboards");
-    cy.contains("h1", "Leaderboard").should("be.visible");
+    cy.url().should("not.include", "/leaderboards");
+    cy.get('[data-cy="home-app-title"]').should("be.visible");
+    cy.get('[data-cy="leaderboard-title"]').should("not.exist");
 
-    cy.get('[href="/"]').should("be.visible").click();
-    cy.url().should("include", "/");
-    cy.contains("h1", "EVM Runners").should("be.visible");
+    cy.get('[data-cy="navbar-leaderboards-link"]').click();
+
+    cy.url().should("include", "/leaderboards");
+    cy.get('[data-cy="home-app-title"]').should("not.exist");
+    cy.get('[data-cy="leaderboard-title"]').should("be.visible");
+
+    cy.get('[data-cy="navbar-home-link"]').click();
+
+    cy.url().should("not.include", "/leaderboards");
+    cy.get('[data-cy="home-app-title"]').should("be.visible");
+    cy.get('[data-cy="leaderboard-title"]').should("not.exist");
   });
 });

@@ -11,10 +11,14 @@ export default function NavBar() {
 
   return (
     <nav className={styles.nav}>
-      <Link href="/" className={isActive("/")}>
+      <Link href="/" className={isActive("/")} data-cy="navbar-home-link">
         Home
       </Link>
-      <Link href="/leaderboards" className={isActive("/leaderboards")}>
+      <Link
+        href="/leaderboards"
+        className={isActive("/leaderboards")}
+        data-cy="navbar-leaderboards-link"
+      >
         Leaderboards
       </Link>
     </nav>
