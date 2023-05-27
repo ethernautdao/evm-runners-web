@@ -15,12 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import "./commands";
-
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
-
 import { mount } from "cypress/react18";
-
 import "@/styles/globals.css";
 import "@/styles/Home.module.css";
 import "@/styles/Leaderboard.module.css";
@@ -40,6 +35,3 @@ declare global {
 }
 
 Cypress.Commands.add("mount", mount);
-
-// Example use:
-// cy.mount(<MyComponent />)
