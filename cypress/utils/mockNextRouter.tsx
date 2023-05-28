@@ -33,7 +33,6 @@ interface MockRouterProps extends Partial<NextRouter> {
 }
 
 const MockNextRouter = ({ children, ...props }: MockRouterProps) => {
-  console.log(props);
   const router = createRouter(props);
 
   return (

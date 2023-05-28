@@ -1,9 +1,9 @@
-import useLevels from "@/hooks/useLevels";
+import useLeaderboards from "@/hooks/useLeaderboards";
 import styles from "@/styles/Leaderboard.module.css";
 import { NextPage } from "next";
 
 const Leaderboard: NextPage = () => {
-  const { data, error, isLoading } = useLevels();
+  const { data, error, isLoading } = useLeaderboards();
 
   return (
     <div className={styles.leaderboardLayout}>
