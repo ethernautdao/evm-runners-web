@@ -1,3 +1,4 @@
+import { Level } from "@/model/Level";
 import { levelsURL, submissionsURL } from "@/utils/constants";
 import { NextApiRequest, NextApiResponse } from "next";
 
@@ -6,6 +7,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
+    const data: Level[] = [];
     //Get levels
     const levels = await fetch(levelsURL).then((response) => response.json());
 
@@ -16,7 +18,37 @@ export default async function handler(
       },
     }).then((response) => response.json());
 
-    return res.status(200).json(submissions);
+    //Format data
+    levels.forEach((level: any) => {
+      const levelSubmissions = submissions.filter(
+        (submission: any) => submission.level_id === Number.parseInt(level.id)
+      );
+
+      const levelGasLeaderboard = levelSubmissions
+        .filter((submission: any) => submission.optimized_for === "gas")
+        .sort(
+          (a: any, b: any) =>
+            a.gas - b.gas ||
+            Date.parse(a.submitted_at) - Date.parse(b.submitted_at)
+        );
+
+      const levelSizeLeaderboard = levelSubmissions
+        .filter((submission: any) => submission.optimized_for === "size")
+        .sort(
+          (a: any, b: any) =>
+            a.size - b.size ||
+            Date.parse(a.submitted_at) - Date.parse(b.submitted_at)
+        );
+
+      data.push({
+        id: level.id,
+        name: level.name,
+        gasLeaderboard: levelGasLeaderboard,
+        sizeLeaderboard: levelSizeLeaderboard
+      });
+    });
+
+    return res.status(200).json(data);
   } catch (err) {
     return res.status(500).send(err);
   }
