@@ -1,4 +1,4 @@
-import { Level } from "@/model/Level";
+import { Leadeboard } from "@/model/Leaderboard";
 import { levelsURL, submissionsURL } from "@/utils/constants";
 import { NextApiRequest, NextApiResponse } from "next";
 
@@ -7,7 +7,8 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const data: Level[] = [];
+    const data: Leadeboard[] = [];
+
     //Get levels
     const levels = await fetch(levelsURL).then((response) => response.json());
 
@@ -41,10 +42,10 @@ export default async function handler(
         );
 
       data.push({
-        id: level.id,
-        name: level.name,
+        levelId: level.id,
+        levelName: level.name,
         gasLeaderboard: levelGasLeaderboard,
-        sizeLeaderboard: levelSizeLeaderboard
+        sizeLeaderboard: levelSizeLeaderboard,
       });
     });
 
