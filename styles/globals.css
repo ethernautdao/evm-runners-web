@@ -29,7 +29,7 @@
   --panel-background: linear-gradient(317.38deg, #18191c, #000);
   --panel-border-rgb: rgb(108, 108, 108);
 
-  --install-command-background: linear-gradient(317.38deg, #18191c, #000);
+  --highlight-background: #212529;
 
   --disabled-button-color: rgb(100, 100, 100);
   --button-color: linear-gradient(97.42deg, #cdffe6, #8fdeff 94.24%);
