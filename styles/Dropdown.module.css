@@ -1,0 +1,30 @@
+.dropdown {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: var(--border-radius);
+  line-height: 2.5rem;
+  background: var(--highlight-background);
+  text-align: initial;
+}
+
+.dropdown span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  color: var(--description-text-color);
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  padding: 0 1rem;
+  color: var(--description-text-color);
+}
+
+.dropdownMenu p {
+  cursor: pointer;
+}
+
+.dropdownMenu p:hover {
+  text-decoration: underline;
+}
