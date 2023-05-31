@@ -1,10 +1,10 @@
-import { Leaderboard } from "@/model/Leaderboard";
 import { Dispatch, SetStateAction, useState } from "react";
+import Leaderboard from "@/model/Leaderboard";
 import dropdownStyles from "@/styles/Dropdown.module.css";
 import commonStyles from "@/styles/Common.module.css";
 
 type DropdownProps = {
-  data: Leaderboard[];
+  data: Leaderboard[] | undefined;
   selectedLevel: Leaderboard | undefined;
   setSelectedLevel: Dispatch<SetStateAction<Leaderboard | undefined>>;
 };

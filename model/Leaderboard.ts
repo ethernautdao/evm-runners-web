@@ -1,4 +1,4 @@
-export interface Leaderboard {
+export default interface Leaderboard {
   levelId: number;
   levelName: string;
   gasLeaderboard: any[];

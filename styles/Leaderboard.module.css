@@ -5,6 +5,7 @@
   text-align: center;
   padding: 6rem;
   min-height: 100vh;
+  color: var(--description-text-color);
 }
 
 /* MEDIA */
