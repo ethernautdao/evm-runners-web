@@ -6,10 +6,13 @@ import LoadingScreen from "./loading/LoadingScreen";
 import Dropdown from "./dropdown/Dropdown";
 import styles from "@/styles/Leaderboard.module.css";
 import { errorText } from "@/utils/strings";
+import LeaderboardTable from "./table/LeaderboardTable";
 
 const Leaderboard: NextPage = () => {
   const [selectedLevel, setSelectedlevel] = useState<Leaderboard>();
   const { data, error, isLoading } = useLeaderboards();
+
+  console.log(data);
 
   return (
     <div className={styles.leaderboardLayout} data-cy="leaderboards-layout">
@@ -18,11 +21,31 @@ const Leaderboard: NextPage = () => {
       ) : isLoading ? (
         <LoadingScreen />
       ) : (
-        <Dropdown
-          data={data}
-          selectedLevel={selectedLevel}
-          setSelectedLevel={setSelectedlevel}
-        />
+        <div className={styles.leaderboardResults}>
+          <Dropdown
+            data={data}
+            selectedLevel={selectedLevel}
+            setSelectedLevel={setSelectedlevel}
+          />
+
+          {selectedLevel && (
+            <div className={styles.leaderboardTables}>
+              <LeaderboardTable
+                key="gas-table"
+                data={selectedLevel?.gasLeaderboard ?? []}
+                rowsPerPage={10}
+                type={1} //Gas
+              />
+
+              <LeaderboardTable
+                key="size-table"
+                data={selectedLevel?.sizeLeaderboard ?? []}
+                rowsPerPage={10}
+                type={2} //Size
+              />
+            </div>
+          )}
+        </div>
       )}
     </div>
   );

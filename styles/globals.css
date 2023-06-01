@@ -11,7 +11,6 @@
 }
 
 :root {
-  --max-width: 1100px;
   --border-radius: 24px;
 
   --font-family: Effra Regular, -apple-system, BlinkMacSystemFont, Segoe UI,
@@ -26,15 +25,12 @@
   --navigation-active-text-color: #fff;
   --navigation-border-color: #cdffe6;
 
-  --panel-background: linear-gradient(317.38deg, #18191c, #000);
-  --panel-border-rgb: rgb(108, 108, 108);
-
   --highlight-background: #212529;
 
-  --disabled-button-color: rgb(100, 100, 100);
-  --button-color: linear-gradient(97.42deg, #cdffe6, #8fdeff 94.24%);
-  --button-hover-color: linear-gradient(194.84deg, #cdffe6, #8fdeff 94.24%);
-  --buton-border: 32px;
+  --table-dark-background: #212529;
+  --table-light-background: #2c3034;
+  --table-footer-color: #464646;
+  --table-hover-color: #4da7aa42;
 
   --footer-svg-fill: white;
 }

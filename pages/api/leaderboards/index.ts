@@ -1,4 +1,4 @@
-import { Leadeboard } from "@/model/Leaderboard";
+import Leaderboard from "@/model/Leaderboard";
 import { levelsURL, submissionsURL } from "@/utils/constants";
 import { NextApiRequest, NextApiResponse } from "next";
 
@@ -7,7 +7,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const data: Leadeboard[] = [];
+    const data: Leaderboard[] = [];
 
     //Get levels
     const levels = await fetch(levelsURL).then((response) => response.json());
