@@ -12,7 +12,7 @@ const Leaderboard: NextPage = () => {
   const { data, error, isLoading } = useLeaderboards();
 
   return (
-    <div className={styles.leaderboardLayout}>
+    <div className={styles.leaderboardLayout} data-cy="leaderboards-layout">
       {error ? (
         <h2>{errorText}</h2>
       ) : isLoading ? (
