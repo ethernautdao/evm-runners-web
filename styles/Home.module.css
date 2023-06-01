@@ -17,13 +17,13 @@
 }
 
 .home p {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--description-text-color);
 }
 
 .home div {
   display: flex;
-  padding: 1rem;
+  margin: 2.5rem 0;
 }
 
 .home svg {
@@ -35,11 +35,13 @@
 
 .installCommand {
   padding: 1rem;
+  margin: 2.5rem 0;
   background: var(--highlight-background);
   display: inline-block;
   border-radius: 24px;
   border: 1px solid gray;
   cursor: pointer;
+  word-break: break-all;
 }
 
 .installCommand code,
