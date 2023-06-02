@@ -4,8 +4,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 6rem;
-  min-height: 100vh;
+  padding: 3rem 1rem;
+  height: 100%;
+  word-break: break-word;
+  overflow: auto;
 }
 
 .home h1 {
@@ -51,8 +53,8 @@
 }
 
 /* MEDIA */
-@media (max-width: 426px) {
+@media screen and (max-width: 375px), (max-height: 679px) {
   .home {
-    padding: 3rem 0;
+    justify-content: unset;
   }
 }

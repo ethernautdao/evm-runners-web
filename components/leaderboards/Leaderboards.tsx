@@ -12,8 +12,6 @@ const Leaderboard: NextPage = () => {
   const [selectedLevel, setSelectedlevel] = useState<Leaderboard>();
   const { data, error, isLoading } = useLeaderboards();
 
-  console.log(data);
-
   return (
     <div className={styles.leaderboardLayout} data-cy="leaderboards-layout">
       {error ? (
