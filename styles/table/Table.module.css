@@ -3,6 +3,16 @@
   padding: 1rem;
 }
 
+.tableWrapper h2 {
+  text-align: center;
+  padding: 1rem;
+  font-family: Effra Bold;
+  background: var(--header-text-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .table {
   overflow: auto;
   border-collapse: collapse;
@@ -23,7 +33,7 @@
   text-align: left;
   font-family: Effra Bold;
   font-size: large;
-  color: var(--text-color);
+  color: var(--description-text-color);
 }
 
 .table th:first-child {

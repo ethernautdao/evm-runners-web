@@ -32,9 +32,12 @@ export default function LeaderboardTable({
 
   const renderRows = (slice: any[]) => {
     return slice?.map((sub: Submission, index: number) => (
-      <tr key={sub.id} data-cy={`leaderboard-table-row-${sub.id}`}>
+      <tr
+        key={`${sub.id}-${index}`}
+        data-cy={`leaderboard-table-row-${sub.id}`}
+      >
         <td>
-          <b>{index + 1}</b>
+          <b>{(page - 1) * 10 + index + 1}</b>
         </td>
         <td>
           <b>
@@ -56,6 +59,7 @@ export default function LeaderboardTable({
 
   return (
     <div className={styles.tableWrapper}>
+      <h2>{type === 1 ? `Gas` : `Size`}</h2>
       <table className={styles.table} data-cy="leaderboard-table">
         <thead>{renderHeaders()}</thead>
         <tbody>{renderRows(slice ?? [])}</tbody>
