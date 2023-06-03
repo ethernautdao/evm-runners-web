@@ -45,13 +45,7 @@
 }
 
 .table tbody tr {
-  cursor: pointer;
   background-color: var(--table-dark-background);
-}
-
-.table tr:hover,
-.table tr:nth-child(odd):hover {
-  background-color: var(--table-hover-color);
 }
 
 .table tr:nth-child(odd) {
