@@ -2,18 +2,35 @@ import styles from "@/styles/Home.module.css";
 import { copyToClipboard } from "@/utils/shared";
 import { appTitle, gameDescription, installCommand } from "@/utils/strings";
 import { NextPage } from "next";
-import { Clipboard, Discord, Github } from "react-bootstrap-icons";
+import { useState } from "react";
+import {
+  Clipboard,
+  ClipboardCheckFill,
+  Discord,
+  Github,
+} from "react-bootstrap-icons";
 
 const Home: NextPage = () => {
+  const [isCopied, setIsCopied] = useState<boolean>(false);
+
+  const handleCopy = () => {
+    copyToClipboard(installCommand);
+    setIsCopied(true);
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 2000);
+  };
+
   return (
     <div className={styles.home}>
       <h1 data-cy="home-app-title">{appTitle}</h1>
-      <span
-        className={styles.installCommand}
-        onClick={() => copyToClipboard(installCommand)}
-      >
+      <span className={styles.installCommand}>
         <code>{installCommand}</code>
-        <Clipboard size={24} />
+        {isCopied ? (
+          <ClipboardCheckFill size={24} />
+        ) : (
+          <Clipboard size={24} onClick={handleCopy} />
+        )}
       </span>
       <p>{gameDescription}</p>
       <div>
