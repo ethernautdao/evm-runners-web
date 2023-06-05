@@ -21,7 +21,11 @@ export default function Dropdown({
   };
 
   return (
-    <div className={dropdownStyles.dropdown} onClick={toggleDropdown}>
+    <div
+      className={dropdownStyles.dropdown}
+      onClick={toggleDropdown}
+      data-cy="leaderboards-dropdown"
+    >
       <span>
         {selectedLevel ? selectedLevel.levelName : "Select level..."}
         {isOpen ? (
@@ -37,6 +41,7 @@ export default function Dropdown({
               <p
                 key={`level-${level.levelId}`}
                 onClick={() => setSelectedLevel(level)}
+                data-cy={`level-${level.levelId}`}
               >{`${index + 1}. ${level.levelName}`}</p>
             );
           })}

@@ -20,7 +20,7 @@ export default function LeaderboardTable({
 
   const renderHeaders = () => {
     return (
-      <tr data-cy="leaderboard-table-header-row">
+      <tr>
         <th>#</th>
         <th>User</th>
         <th>{type === 1 ? `Gas` : `Size`} Score</th>
@@ -32,10 +32,7 @@ export default function LeaderboardTable({
 
   const renderRows = (slice: any[]) => {
     return slice?.map((sub: Submission, index: number) => (
-      <tr
-        key={`${sub.id}-${index}`}
-        data-cy={`leaderboard-table-row-${sub.id}`}
-      >
+      <tr key={`${sub.id}-${index}`} data-cy={`${type === 1 ? "gas" : "size"}-table-row-${sub.id}`}>
         <td>
           <b>{(page - 1) * 10 + index + 1}</b>
         </td>
@@ -60,11 +57,11 @@ export default function LeaderboardTable({
   return (
     <div className={styles.tableWrapper}>
       <h2>{type === 1 ? `Gas` : `Size`}</h2>
-      <table className={styles.table} data-cy="leaderboard-table">
+      <table className={styles.table} data-cy={`${type === 1 ? "gas" : "size"}-leaderboard-table`}>
         <thead>{renderHeaders()}</thead>
         <tbody>{renderRows(slice ?? [])}</tbody>
       </table>
-      <TableFooter range={range} slice={slice} setPage={setPage} page={page} />
+      <TableFooter range={range} slice={slice} setPage={setPage} page={page} type={`${type === 1 ? "gas" : "size"}`}/>
     </div>
   );
 }

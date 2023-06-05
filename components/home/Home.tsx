@@ -1,4 +1,5 @@
 import styles from "@/styles/Home.module.css";
+import { discordURL, githubURL } from "@/utils/constants";
 import { copyToClipboard } from "@/utils/shared";
 import { appTitle, gameDescription, installCommand } from "@/utils/strings";
 import { NextPage } from "next";
@@ -27,24 +28,30 @@ const Home: NextPage = () => {
       <span className={styles.installCommand}>
         <code>{installCommand}</code>
         {isCopied ? (
-          <ClipboardCheckFill size={24} />
+          <ClipboardCheckFill size={24} data-cy="command-copied-icon" />
         ) : (
-          <Clipboard size={24} onClick={handleCopy} />
+          <Clipboard
+            size={24}
+            onClick={handleCopy}
+            data-cy="command-copy-icon"
+          />
         )}
       </span>
       <p>{gameDescription}</p>
       <div>
         <a
-          href="https://github.com/ethernautdao/evm-runners-cli"
+          href={githubURL}
           target="_blank"
           rel="noopener noreferrer"
+          data-cy="github-icon"
         >
           <Github size={32} />
         </a>
         <a
-          href="https://discord.com/invite/RQ5WYDxUF3"
+          href={discordURL}
           target="_blank"
           rel="noopener noreferrer"
+          data-cy="discord-icon"
         >
           <Discord size={32} />
         </a>
