@@ -18,6 +18,12 @@ import { mount } from "cypress/react18";
 import "@/styles/globals.css";
 import "@/styles/Home.module.css";
 import "@/styles/Leaderboard.module.css";
+import "@/styles/table/Table.module.css";
+import "@/styles/table/TableFooter.module.css";
+import "@/styles/Common.module.css";
+import "@/styles/Dropdown.module.css";
+import "@/styles/Layout.module.css";
+import "@/styles/LoadingScreen.module.css";
 import "@/styles/Navbar.module.css";
 import "@/styles/Footer.module.css";
 

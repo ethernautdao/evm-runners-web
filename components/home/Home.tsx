@@ -26,7 +26,7 @@ const Home: NextPage = () => {
     <div className={styles.home}>
       <h1 data-cy="home-app-title">{appTitle}</h1>
       <span className={styles.installCommand}>
-        <code>{installCommand}</code>
+        <code data-cy="home-install-command">{installCommand}</code>
         {isCopied ? (
           <ClipboardCheckFill size={24} data-cy="command-copied-icon" />
         ) : (
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
           />
         )}
       </span>
-      <p>{gameDescription}</p>
+      <p data-cy="home-game-description">{gameDescription}</p>
       <div>
         <a
           href={githubURL}

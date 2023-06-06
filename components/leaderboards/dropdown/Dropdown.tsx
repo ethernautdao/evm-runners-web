@@ -29,13 +29,22 @@ export default function Dropdown({
       <span>
         {selectedLevel ? selectedLevel.levelName : "Select level..."}
         {isOpen ? (
-          <div className={commonStyles.arrowUp} />
+          <div
+            className={commonStyles.arrowUp}
+            data-cy="leaderboards-arrow-up"
+          />
         ) : (
-          <div className={commonStyles.arrowDown} />
+          <div
+            className={commonStyles.arrowDown}
+            data-cy="leaderboards-arrow-down"
+          />
         )}
       </span>
       {isOpen && (
-        <div className={dropdownStyles.dropdownMenu}>
+        <div
+          className={dropdownStyles.dropdownMenu}
+          data-cy="leaderboards-dropdown-options"
+        >
           {data?.map((level: Leaderboard, index: number) => {
             return (
               <p
