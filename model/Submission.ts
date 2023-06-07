@@ -1,6 +1,6 @@
 export default interface Submission {
   bytecode: string;
-  discriminator: number;
+  discriminator: string;
   gas: string;
   id: number;
   level_id: number;

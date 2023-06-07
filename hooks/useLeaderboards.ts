@@ -14,6 +14,6 @@ export default function useLeaderboards() {
   return {
     data,
     isLoading,
-    error,
+    error: error || !Array.isArray(data),
   };
 }
