@@ -14,10 +14,10 @@ const Leaderboard: NextPage = () => {
 
   return (
     <div className={styles.leaderboardLayout} data-cy="leaderboards-layout">
-      {error ? (
-        <h2 data-cy="leaderboards-error-text">{errorText}</h2>
-      ) : isLoading ? (
+      {isLoading ? (
         <LoadingScreen />
+      ) : error ? (
+        <h2 data-cy="leaderboards-error-text">{errorText}</h2>
       ) : (
         <div className={styles.leaderboardResults}>
           <Dropdown
