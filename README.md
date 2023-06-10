@@ -5,7 +5,7 @@
 The web app of the [EVM Runners](https://github.com/ethernautdao/evm-runners-cli) game.
 You can get instructions on how to install the game and see the different leaderboards.
 
-It is [live here](https://evmr.vercel.app).
+It is [live here](https://evmr.sh).
 
 ### Run this application yourself
 
