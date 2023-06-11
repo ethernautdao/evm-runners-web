@@ -6,7 +6,11 @@ import Footer from "./common/footer/Footer";
 import NavBar from "./common/navbar/NavBar";
 import styles from "@/styles/Layout.module.css";
 
-export default function Layout({ children }: { children: ReactNode }) {
+type LayoutProps = {
+  children: ReactNode;
+};
+
+export default function Layout({ children }: LayoutProps) {
   const { mounted } = useIsMounted();
 
   if (!mounted) {
