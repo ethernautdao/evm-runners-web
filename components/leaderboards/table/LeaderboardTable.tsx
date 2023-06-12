@@ -40,9 +40,7 @@ export default function LeaderboardTable({
           <b>{(page - 1) * 10 + index + 1}</b>
         </td>
         <td>
-          <b>
-            {sub.user_name} #{sub.discriminator}
-          </b>
+          <b>{sub.user_name}</b>
         </td>
         <td>
           <b>{type === 1 ? sub.gas : sub.size}</b>

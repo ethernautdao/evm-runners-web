@@ -5,7 +5,6 @@
     "gasLeaderboard": [
       {
         "bytecode": "0xBYTEC0D3_1",
-        "discriminator": 1,
         "gas": "100",
         "id": "1",
         "level_id": 1,
@@ -18,7 +17,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_2",
-        "discriminator": 2,
         "gas": "200",
         "id": "2",
         "level_id": 1,
@@ -31,7 +29,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_3",
-        "discriminator": 3,
         "gas": "300",
         "id": "3",
         "level_id": 1,
@@ -44,7 +41,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_4",
-        "discriminator": 4,
         "gas": "400",
         "id": "4",
         "level_id": 1,
@@ -57,7 +53,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_5",
-        "discriminator": 5,
         "gas": "500",
         "id": "5",
         "level_id": 1,
@@ -70,7 +65,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_6",
-        "discriminator": 6,
         "gas": "600",
         "id": "6",
         "level_id": 1,
@@ -83,7 +77,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_7",
-        "discriminator": 7,
         "gas": "700",
         "id": "7",
         "level_id": 1,
@@ -96,7 +89,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_8",
-        "discriminator": 8,
         "gas": "800",
         "id": "8",
         "level_id": 1,
@@ -109,7 +101,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_9",
-        "discriminator": 9,
         "gas": "900",
         "id": "9",
         "level_id": 1,
@@ -122,7 +113,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_10",
-        "discriminator": 10,
         "gas": "1000",
         "id": "10",
         "level_id": 1,
@@ -135,7 +125,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_11",
-        "discriminator": 11,
         "gas": "1100",
         "id": "11",
         "level_id": 1,
@@ -150,7 +139,6 @@
     "sizeLeaderboard": [
       {
         "bytecode": "0xBYTEC0D3_1",
-        "discriminator": 1,
         "gas": "100",
         "id": "1",
         "level_id": 1,
@@ -163,7 +151,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_2",
-        "discriminator": 2,
         "gas": "200",
         "id": "2",
         "level_id": 1,
@@ -176,7 +163,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_3",
-        "discriminator": 3,
         "gas": "300",
         "id": "3",
         "level_id": 1,
@@ -189,7 +175,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_4",
-        "discriminator": 4,
         "gas": "400",
         "id": "4",
         "level_id": 1,
@@ -202,7 +187,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_5",
-        "discriminator": 5,
         "gas": "500",
         "id": "5",
         "level_id": 1,
@@ -215,7 +199,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_6",
-        "discriminator": 6,
         "gas": "600",
         "id": "6",
         "level_id": 1,
@@ -228,7 +211,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_7",
-        "discriminator": 7,
         "gas": "700",
         "id": "7",
         "level_id": 1,
@@ -241,7 +223,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_8",
-        "discriminator": 8,
         "gas": "800",
         "id": "8",
         "level_id": 1,
@@ -254,7 +235,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_9",
-        "discriminator": 9,
         "gas": "900",
         "id": "9",
         "level_id": 1,
@@ -267,7 +247,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_10",
-        "discriminator": 10,
         "gas": "1000",
         "id": "10",
         "level_id": 1,
@@ -280,7 +259,6 @@
       },
       {
         "bytecode": "0xBYTEC0D3_11",
-        "discriminator": 11,
         "gas": "1100",
         "id": "11",
         "level_id": 1,
