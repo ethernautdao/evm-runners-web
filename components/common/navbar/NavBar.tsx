@@ -1,4 +1,5 @@
 import styles from "@/styles/Navbar.module.css";
+import { Web3Button } from "@web3modal/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -21,6 +22,16 @@ export default function NavBar() {
       >
         Leaderboards
       </Link>
+      <Link
+        href="/submit"
+        className={isActive("/submit")}
+        data-cy="navbar-submit-link"
+      >
+        Submit
+      </Link>
+
+      <Web3Button />
+
     </nav>
   );
 }

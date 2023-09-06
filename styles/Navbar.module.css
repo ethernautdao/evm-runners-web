@@ -1,10 +1,11 @@
 .nav {
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
-  height: 50px;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
   padding: 1rem 0;
-  right: 0;
-  left: 0;
-  text-align: center;
 }
 
 .nav a {
@@ -13,7 +14,20 @@
   margin: 0 1rem;
 }
 
+.nav w3m-core-button {
+  position: absolute;
+  right: 10px;
+}
+
 .active {
   color: var(--navigation-active-text-color) !important;
   border-bottom: 2px solid var(--navigation-border-color);
+}
+
+/* MEDIA */
+@media (max-width: 1024px) {
+  .nav w3m-core-button {
+    position: unset;
+    margin-top: 10px;
+  }
 }
