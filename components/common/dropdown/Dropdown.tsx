@@ -1,12 +1,12 @@
 import { Dispatch, SetStateAction, useState } from "react";
-import Leaderboard from "@/model/Leaderboard";
 import dropdownStyles from "@/styles/Dropdown.module.css";
 import commonStyles from "@/styles/Common.module.css";
+import Level from "@/model/Level";
 
 type DropdownProps = {
-  data: Leaderboard[] | undefined;
-  selectedLevel: Leaderboard | undefined;
-  setSelectedLevel: Dispatch<SetStateAction<Leaderboard | undefined>>;
+  data: Level[] | undefined;
+  selectedLevel: Level | undefined;
+  setSelectedLevel: Dispatch<SetStateAction<Level | undefined>>;
 };
 
 export default function Dropdown({
@@ -24,34 +24,34 @@ export default function Dropdown({
     <div
       className={dropdownStyles.dropdown}
       onClick={toggleDropdown}
-      data-cy="leaderboards-dropdown"
+      data-cy="levels-dropdown"
     >
       <span>
-        {selectedLevel ? selectedLevel.levelName : "Select level..."}
+        {selectedLevel ? selectedLevel.name : "Select level..."}
         {isOpen ? (
           <div
             className={commonStyles.arrowUp}
-            data-cy="leaderboards-arrow-up"
+            data-cy="levels-arrow-up"
           />
         ) : (
           <div
             className={commonStyles.arrowDown}
-            data-cy="leaderboards-arrow-down"
+            data-cy="levels-arrow-down"
           />
         )}
       </span>
       {isOpen && (
         <div
           className={dropdownStyles.dropdownMenu}
-          data-cy="leaderboards-dropdown-options"
+          data-cy="levels-dropdown-options"
         >
-          {data?.map((level: Leaderboard, index: number) => {
+          {data?.map((level: Level, index: number) => {
             return (
               <p
-                key={`level-${level.levelId}`}
+                key={`level-${level.id}`}
                 onClick={() => setSelectedLevel(level)}
-                data-cy={`level-${level.levelId}`}
-              >{`${index + 1}. ${level.levelName}`}</p>
+                data-cy={`level-${level.id}`}
+              >{`${index + 1}. ${level.name}`}</p>
             );
           })}
         </div>

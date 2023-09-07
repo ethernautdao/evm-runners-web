@@ -1,7 +1,7 @@
 import React from "react";
 import data from "../../../cypress/fixtures/leaderboards.json";
 import Dropdown from "./Dropdown";
-import Leaderboard from "@/model/Leaderboard";
+import Level from "@/model/Level";
 
 describe("<Dropdown />", () => {
   beforeEach(() => {
@@ -9,7 +9,7 @@ describe("<Dropdown />", () => {
 
     cy.mount(
       <Dropdown
-        data={data as unknown as Leaderboard[]}
+        data={data as unknown as Level[]}
         selectedLevel={undefined}
         setSelectedLevel={setSelectedLevel}
       />

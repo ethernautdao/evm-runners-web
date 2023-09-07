@@ -3,25 +3,28 @@ import { useState } from "react";
 import Leaderboard from "@/model/Leaderboard";
 import useLeaderboards from "@/hooks/useLeaderboards";
 import LoadingScreen from "./loading/LoadingScreen";
-import Dropdown from "./dropdown/Dropdown";
 import styles from "@/styles/Leaderboard.module.css";
-import { errorText } from "@/utils/strings";
+import { errorText, loadingText } from "@/utils/strings";
 import LeaderboardTable from "./table/LeaderboardTable";
+import useLevels from "@/hooks/useLevels";
+import Level from "@/model/Level";
+import Dropdown from "../common/dropdown/Dropdown";
 
 const Leaderboard: NextPage = () => {
-  const [selectedLevel, setSelectedlevel] = useState<Leaderboard>();
+  const { data: levelData } = useLevels();
+  const [selectedLevel, setSelectedlevel] = useState<Level>();
   const { data, error, isLoading } = useLeaderboards();
 
   return (
     <div className={styles.leaderboardLayout} data-cy="leaderboards-layout">
       {isLoading ? (
-        <LoadingScreen />
+        <LoadingScreen text={loadingText} />
       ) : error ? (
         <h2 data-cy="leaderboards-error-text">{errorText}</h2>
       ) : (
         <div className={styles.leaderboardResults}>
           <Dropdown
-            data={data}
+            data={levelData}
             selectedLevel={selectedLevel}
             setSelectedLevel={setSelectedlevel}
           />
@@ -30,14 +33,20 @@ const Leaderboard: NextPage = () => {
             <div className={styles.leaderboardTables}>
               <LeaderboardTable
                 key="gas-table"
-                data={selectedLevel?.gasLeaderboard ?? []}
+                data={
+                  data.find((l: Leaderboard) => l.levelId === selectedLevel?.id)
+                    .gasLeaderboard ?? []
+                }
                 rowsPerPage={10}
                 type={1} //Gas
               />
 
               <LeaderboardTable
                 key="size-table"
-                data={selectedLevel?.sizeLeaderboard ?? []}
+                data={
+                  data.find((l: Leaderboard) => l.levelId === selectedLevel?.id)
+                    .sizeLeaderboard ?? []
+                }
                 rowsPerPage={10}
                 type={2} //Size
               />

@@ -1,0 +1,42 @@
+.submitLayout {
+  display: flex;
+  padding: 3rem 1rem;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  text-align: -webkit-center;
+  color: var(--description-text-color);
+}
+
+.submitFeedbackLayout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.submitForm input {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: var(--border-radius);
+  line-height: 2.5rem;
+  background: var(--highlight-background);
+  text-align: initial;
+  padding: 0 1rem;
+  color: var(--description-text-color);
+}
+
+.submitForm button {
+  margin: 1.5rem 0;
+  cursor: pointer;
+  width: 20%;
+  height: 42px;
+  border: 1px solid gray;
+  border-radius: calc(var(--border-radius) / 2);
+  background: var(--highlight-background);
+  color: var(--description-text-color);
+}
+
+.submitForm button:hover {
+  background: var(--button-hover-background);
+}
