@@ -5,7 +5,7 @@ import useUser from "./useUser";
 import Level from "@/model/Level";
 
 export default function useSubmit() {
-  const [bytecode, setBytecode] = useState<string>();
+  const [bytecode, setBytecode] = useState<string>("");
   const [selectedLevel, setSelectedlevel] = useState<Level>();
 
   const {

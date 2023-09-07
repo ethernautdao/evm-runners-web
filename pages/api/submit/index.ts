@@ -47,6 +47,6 @@ export default async function handler(
 
     return res.status(200).json(submissionFeedback);
   } catch (err: any) {
-    return res.status(500).send(err);
+    return res.status(500).send(err?.message ?? "");
   }
 }
