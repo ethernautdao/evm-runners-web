@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Average"
+  },
+  {
+    "id": 2,
+    "name": "FibHash"
+  },
+  {
+    "id": 3,
+    "name": "Fibonacci"
+  }
+]

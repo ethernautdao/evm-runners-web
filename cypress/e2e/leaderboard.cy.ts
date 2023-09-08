@@ -23,7 +23,7 @@ describe("LEADERBOARDS", () => {
     cy.visit("/leaderboards");
     cy.wait("@getLeaderboardData");
 
-    cy.get('[data-cy="leaderboards-dropdown"]')
+    cy.get('[data-cy="levels-dropdown"]')
       .click()
       .within(() => {
         //First level
@@ -39,12 +39,16 @@ describe("LEADERBOARDS", () => {
 
   context("With Average level selected", () => {
     beforeEach(() => {
+      cy.intercept("/api/levels", { fixture: "levels.json" }).as(
+        "getLevelsData"
+      );
       cy.intercept("/api/leaderboards", { fixture: "leaderboards.json" }).as(
         "getLeaderboardData"
       );
       cy.visit("/leaderboards");
+      cy.wait("@getLevelsData");
       cy.wait("@getLeaderboardData");
-      cy.get('[data-cy="leaderboards-dropdown"]').click();
+      cy.get('[data-cy="levels-dropdown"]').click();
       cy.get('[data-cy="level-1"]').click();
     });
 
