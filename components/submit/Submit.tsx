@@ -50,7 +50,7 @@ const Submit: NextPage = () => {
       ) : usersError ? (
         <h2 data-cy="submit-user-error-text">{submitUserErrorText}</h2>
       ) : (
-        <div className={styles.submitFeedbackLayout}>
+        <div className={styles.submitFeedbackLayout} data-cy="submit-form">
           <form className={styles.submitForm} onSubmit={handleSubmit}>
             <Dropdown
               data={levelData}
