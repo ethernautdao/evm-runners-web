@@ -52,23 +52,27 @@ describe("<Leaderboard />", () => {
 
   context("Has data", () => {
     beforeEach(() => {
+      cy.intercept("/api/levels", { fixture: "levels.json" }).as(
+        "getLevelsData"
+      );
       cy.intercept("/api/leaderboards", { fixture: "leaderboards.json" }).as(
         "getLeaderboardData"
       );
       cy.mount(<Leaderboard />);
       cy.wait("@getLeaderboardData");
+      cy.wait("@getLevelsData");
     });
 
     it("should render dropdown", () => {
-      cy.get('[data-cy="leaderboards-error-text"]').should("not.exist");
+      cy.get('[data-cy="levels-error-text"]').should("not.exist");
       cy.get('[data-cy="loading-screen"]').should("not.exist");
-      cy.get('[data-cy="leaderboards-dropdown"]').should("be.visible");
+      cy.get('[data-cy="levels-dropdown"]').should("be.visible");
       cy.get('[data-cy="gas-leaderboard-table"]').should("not.exist");
       cy.get('[data-cy="size-leaderboard-table"]').should("not.exist");
     });
 
     it("should render tables", () => {
-      cy.get('[data-cy="leaderboards-dropdown"]').click();
+      cy.get('[data-cy="levels-dropdown"]').click();
       cy.get('[data-cy="level-1"]').click();
       cy.get('[data-cy="gas-leaderboard-table"]').should("be.visible");
       cy.get('[data-cy="size-leaderboard-table"]').should("be.visible");

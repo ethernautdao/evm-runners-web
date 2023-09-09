@@ -2,13 +2,13 @@ import { NextPage } from "next";
 import { useState } from "react";
 import Leaderboard from "@/model/Leaderboard";
 import useLeaderboards from "@/hooks/useLeaderboards";
-import LoadingScreen from "./loading/LoadingScreen";
 import styles from "@/styles/Leaderboard.module.css";
 import { errorText, loadingText } from "@/utils/strings";
 import LeaderboardTable from "./table/LeaderboardTable";
 import useLevels from "@/hooks/useLevels";
 import Level from "@/model/Level";
 import Dropdown from "../common/dropdown/Dropdown";
+import LoadingScreen from "../common/loading/LoadingScreen";
 
 const Leaderboard: NextPage = () => {
   const { data: levelData } = useLevels();

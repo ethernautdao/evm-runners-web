@@ -30,8 +30,7 @@ export default function NavBar() {
         Submit
       </Link>
 
-      <Web3Button />
-
+      <Web3Button data-cy="navbar-connect-wallet-button" />
     </nav>
   );
 }

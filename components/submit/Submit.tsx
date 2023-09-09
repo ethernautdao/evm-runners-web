@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import styles from "@/styles/Submit.module.css";
 import useSubmit from "@/hooks/useSubmit";
-import LoadingScreen from "../leaderboards/loading/LoadingScreen";
+import LoadingScreen from "../common/loading/LoadingScreen";
 import { useAccount } from "wagmi";
 import {
   connectWalletText,
