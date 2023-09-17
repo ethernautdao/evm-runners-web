@@ -1,0 +1,13 @@
+.connectButton {
+  color: black;
+  width: 10rem;
+  height: 1.5rem;
+  background: var(--connect-button-color);
+  border: none;
+  border-radius: var(--connect-button-border);
+  cursor: pointer;
+}
+
+.connectButton:hover {
+  background: var(--connect-button-hover-color);
+}

@@ -34,6 +34,10 @@
 
   --button-hover-background: #32363b;
 
+  --connect-button-color: linear-gradient(97.42deg, #cdffe6, #8fdeff 94.24%);
+  --connect-button-hover-color: linear-gradient(194.84deg, #cdffe6, #8fdeff 94.24%);
+  --connect-button-border: 32px;
+
   --footer-svg-fill: white;
 }
 
