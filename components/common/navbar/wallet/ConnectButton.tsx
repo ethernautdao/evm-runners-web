@@ -1,6 +1,5 @@
 import styles from "@/styles/ConnectButton.module.css";
 import { useWeb3Modal } from "@web3modal/react";
-import { useState } from "react";
 import { useAccount, useDisconnect } from "wagmi";
 
 export default function ConnectButton() {

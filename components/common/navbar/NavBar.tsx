@@ -1,5 +1,4 @@
 import styles from "@/styles/Navbar.module.css";
-import { Web3Button } from "@web3modal/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import ConnectButton from "./wallet/ConnectButton";
