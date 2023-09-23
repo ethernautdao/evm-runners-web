@@ -58,7 +58,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: url("../assets/dark-background.png");
+  background-image: url("../assets/background.png");
   background-size: cover;
 }
 

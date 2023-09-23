@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.home}>
-      <h1 data-cy="home-app-title">{appTitle}</h1>
+      {/* <h1 data-cy="home-app-title">{appTitle}</h1> */}
       <span className={styles.installCommand}>
         <code data-cy="home-install-command">{installCommand}</code>
         {isCopied ? (
