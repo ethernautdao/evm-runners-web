@@ -15,8 +15,14 @@
   width: 100%;
 }
 
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .submitForm input {
-  width: 100%;
+  width: 50%;
   border: 1px solid gray;
   border-radius: var(--border-radius);
   line-height: 2.5rem;
@@ -40,3 +46,11 @@
 .submitForm button:hover {
   background: var(--button-hover-background);
 }
+
+/* MEDIA */
+@media (max-width: 1320px) {
+  .submitForm input {
+    width: 100%;
+  }
+}
+
