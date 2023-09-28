@@ -1,16 +1,17 @@
 import InitialLoad from "@/components/InitialLoad";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { lazy, Suspense } from "react";
+import dynamic from "next/dynamic";
 
-const Layout = lazy(() => import("../components/Layout"));
+const Layout = dynamic(() => import("../components/Layout"), {
+  loading: () => <InitialLoad />,
+  ssr: false,
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Suspense fallback={<InitialLoad />}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </Suspense>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
