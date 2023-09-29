@@ -1,12 +1,11 @@
+import styles from "@/styles/InitialLoad.module.css";
 import { initialLoadText } from "@/utils/strings";
+import LoadingScreen from "./common/loading/LoadingScreen";
 
 export default function InitialLoad() {
   return (
-    <div
-      style={{ fontSize: "20px", fontWeight: "bolder" }}
-      data-cy="initial-load"
-    >
-      {initialLoadText}
+    <div className={styles.initialLoad} data-cy="initial-load">
+      <LoadingScreen text={initialLoadText} />
     </div>
   );
 }

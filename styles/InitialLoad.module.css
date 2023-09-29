@@ -1,0 +1,11 @@
+.initialLoad {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  color: var(--description-text-color);
+}
