@@ -1,10 +1,9 @@
-import InitialLoad from "@/components/InitialLoad";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
 
 const Layout = dynamic(() => import("../components/Layout"), {
-  loading: () => <InitialLoad />,
+  loading: () => <></>,
   ssr: false,
 });
 
