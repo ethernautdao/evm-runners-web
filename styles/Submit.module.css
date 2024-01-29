@@ -47,10 +47,30 @@
   background: var(--button-hover-background);
 }
 
+.connectWalletCommand {
+  padding: 1rem;
+  margin: 2.5rem 0;
+  background: var(--highlight-background);
+  display: inline-block;
+  border-radius: 24px;
+  border: 1px solid gray;
+  word-break: break-all;
+}
+
+.connectWalletCommand code,
+.connectWalletCommand svg {
+  color: white;
+  vertical-align: middle;
+  margin: 0.5rem;
+}
+
+.connectWalletCommand svg {
+  cursor: pointer;
+}
+
 /* MEDIA */
 @media (max-width: 1320px) {
   .submitForm input {
     width: 100%;
   }
 }
-
